@@ -2,11 +2,15 @@ name: MLOps CI/CD Pipeline
 
 on:
   push:
-    branches: [main]  # Trigger on direct code changes
+    branches: [main]
+    paths-ignore:
+      - 'data/**'  # Ignore data-only changes
+  
   workflow_run:
-    workflows: ["Train, Promote and Deploy Iris Model"]  # Trigger after model training
+    workflows: ["Train, Promote and Deploy Iris Model"]
     types:
       - completed
+
 
 jobs:
   build-test-deploy:
