@@ -3,9 +3,10 @@ from pydantic import BaseModel, Field
 import joblib
 import numpy as np
 import logging
+import mlflow.pyfunc
 
 # Load model
-model = joblib.load("models/LogisticRegression.pkl")
+model = mlflow.pyfunc.load_model("models:/IrisClassifier/Production")
 
 app = FastAPI()
 logging.basicConfig(filename='logs/api.log', level=logging.INFO)
