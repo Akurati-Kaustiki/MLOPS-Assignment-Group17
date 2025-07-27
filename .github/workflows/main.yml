@@ -2,10 +2,16 @@ name: MLOps CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    branches: [main]  # Trigger on direct code changes
+  workflow_run:
+    workflows: ["Train, Promote and Deploy Iris Model"]  # Trigger after model training
+    types:
+      - completed
 
 jobs:
   build-test-deploy:
+    if: |
+      github.event_name == 'push' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
 
     steps:
