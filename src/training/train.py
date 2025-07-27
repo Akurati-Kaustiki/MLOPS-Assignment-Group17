@@ -13,7 +13,7 @@ import os
 
 # Load data
 df = pd.read_csv("../../data/iris.csv")
-X = df.drop(columns=["target"])
+X = df.drop(columns=["target", "target_name"])
 y = df["target"]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)

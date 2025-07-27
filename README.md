@@ -82,7 +82,7 @@ python src/data/preprocess.py
 
 ### 4. Train and log models with MLflow
 ```bash
-python src/models/train.py
+python src/training/train.py
 ```
 
 This:
