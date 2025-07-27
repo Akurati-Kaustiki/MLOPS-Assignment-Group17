@@ -7,7 +7,7 @@ import mlflow.pyfunc
 import os
 
 # Load model
-os.environ["MLFLOW_TRACKING_URI"] = "file:/app/mlruns"
+mlflow.set_tracking_uri("file:///app/mlruns")
 model = mlflow.pyfunc.load_model("models:/IrisClassifier/Production")
 
 app = FastAPI()
