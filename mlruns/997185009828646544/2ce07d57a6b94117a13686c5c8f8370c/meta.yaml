@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/MLOPS-Assignment-Group17/MLOPS-Assignment-Group17/mlruns/997185009828646544/2ce07d57a6b94117a13686c5c8f8370c/artifacts
+end_time: 1753626292573
+entry_point_name: ''
+experiment_id: '997185009828646544'
+lifecycle_stage: active
+run_id: 2ce07d57a6b94117a13686c5c8f8370c
+run_name: SVM
+run_uuid: 2ce07d57a6b94117a13686c5c8f8370c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753626291182
+status: 3
+tags: []
+user_id: runner

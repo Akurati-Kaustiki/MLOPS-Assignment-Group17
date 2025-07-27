@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/MLOPS-Assignment-Group17/MLOPS-Assignment-Group17/mlruns/997185009828646544/d988b6a5f2a64a6c8abff29a0e03cb24/artifacts
+end_time: 1753626291180
+entry_point_name: ''
+experiment_id: '997185009828646544'
+lifecycle_stage: active
+run_id: d988b6a5f2a64a6c8abff29a0e03cb24
+run_name: RandomForest
+run_uuid: d988b6a5f2a64a6c8abff29a0e03cb24
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753626289654
+status: 3
+tags: []
+user_id: runner
