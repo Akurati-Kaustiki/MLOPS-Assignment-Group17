@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/akuratikaustiki/Desktop/MLOPS/assignment_2/iris_mlops/src/training/../../mlruns/253326678532782981/372efb80efc048faa3a1536b29f8e14d/artifacts
+end_time: 1753462448244
+entry_point_name: ''
+experiment_id: '253326678532782981'
+lifecycle_stage: active
+run_id: 372efb80efc048faa3a1536b29f8e14d
+run_name: SVM
+run_uuid: 372efb80efc048faa3a1536b29f8e14d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753462445664
+status: 3
+tags: []
+user_id: akuratikaustiki

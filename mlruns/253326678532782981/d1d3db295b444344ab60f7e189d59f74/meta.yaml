@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/akuratikaustiki/Desktop/MLOPS/assignment_2/iris_mlops/src/training/../../mlruns/253326678532782981/d1d3db295b444344ab60f7e189d59f74/artifacts
+end_time: 1753462135192
+entry_point_name: ''
+experiment_id: '253326678532782981'
+lifecycle_stage: active
+run_id: d1d3db295b444344ab60f7e189d59f74
+run_name: RandomForest
+run_uuid: d1d3db295b444344ab60f7e189d59f74
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753462132462
+status: 3
+tags: []
+user_id: akuratikaustiki
