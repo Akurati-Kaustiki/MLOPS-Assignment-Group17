@@ -82,8 +82,7 @@ python src/data/preprocess.py
 
 ### 4. Train and log models with MLflow
 ```bash
-cd src/training
-python train.py
+python src/training/train.py
 ```
 
 This:
@@ -94,9 +93,8 @@ This:
 ---
 
 ## View MLflow UI
-Open new terminal
+Open new terminal  -> Go to root directory of the project
 ```bash
-cd iris_mlops
 mlflow ui
 ```
 Open [http://localhost:5000](http://localhost:5000) in your browser.

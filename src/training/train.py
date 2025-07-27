@@ -12,7 +12,7 @@ import mlflow.sklearn
 import os
 
 # Load data
-df = pd.read_csv("../../data/iris.csv")
+df = pd.read_csv("data/iris.csv")
 X = df.drop(columns=["target", "target_name"])
 y = df["target"]
 
@@ -25,7 +25,7 @@ models = {
 }
 
 # Set tracking and experiment
-mlflow.set_tracking_uri("file:../../mlruns")
+# mlflow.set_tracking_uri("file:mlruns")
 mlflow.set_experiment("Iris_Classification")
 
 best_acc = 0
@@ -51,8 +51,8 @@ for name, model in models.items():
             best_run_id = run.info.run_id
 
 # Save best model locally
-os.makedirs("../../models", exist_ok=True)
-model_path = f"../../models/{best_model_name}.pkl"
+os.makedirs("models", exist_ok=True)
+model_path = f"models/{best_model_name}.pkl"
 joblib.dump(best_model, model_path)
 print(f"Saved best model locally as {model_path}")
 
