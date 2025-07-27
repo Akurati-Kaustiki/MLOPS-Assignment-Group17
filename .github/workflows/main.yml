@@ -4,7 +4,9 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - 'data/**'  # Data changes only retrain, not directly deploy
+      - 'data/**'
+      - 'README.md'
+      - '.gitignore'
 
   workflow_run:
     workflows: ["Train and Promote Iris Model"]

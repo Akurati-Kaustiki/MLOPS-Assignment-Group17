@@ -142,7 +142,11 @@ curl -X POST http://localhost:8000/predict \
 > Automatically:
 - Lints the code
 - Builds and pushes Docker image
-- Can be extended for EC2/LocalStack deployment
+- Deployed in local through Docker
+
+```bash
+docker run -p 8000:8000 akaustiki/iris-api:latest
+```
 
 Workflow file: `.github/workflows/main.yml`
 
