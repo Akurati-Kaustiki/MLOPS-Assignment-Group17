@@ -36,6 +36,10 @@ jobs:
       with:
         name: mlruns
         path: mlruns/
+    
+    - name: Fix MLflow paths to be relative
+      run: python scripts/fix_mlflow_paths.py
+
 
     - name: Commit updated mlruns to repo
       run: |
