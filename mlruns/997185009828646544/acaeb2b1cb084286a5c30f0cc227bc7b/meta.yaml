@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/MLOPS-Assignment-Group17/MLOPS-Assignment-Group17/mlruns/997185009828646544/acaeb2b1cb084286a5c30f0cc227bc7b/artifacts
+end_time: 1753631073688
+entry_point_name: ''
+experiment_id: '997185009828646544'
+lifecycle_stage: active
+run_id: acaeb2b1cb084286a5c30f0cc227bc7b
+run_name: LogisticRegression
+run_uuid: acaeb2b1cb084286a5c30f0cc227bc7b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753631069500
+status: 4
+tags: []
+user_id: akuratikaustiki

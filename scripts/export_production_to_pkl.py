@@ -9,7 +9,6 @@ mlflow.set_tracking_uri("file:./mlruns")
 model = mlflow.sklearn.load_model("models:/IrisClassifier/Production")
 
 # Save as .pkl
-os.makedirs("models", exist_ok=True)
 joblib.dump(model, "models/model.pkl")
 
 print(" Model saved as models/model.pkl")

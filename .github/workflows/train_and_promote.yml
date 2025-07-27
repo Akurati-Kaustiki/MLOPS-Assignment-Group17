@@ -45,7 +45,7 @@ jobs:
         git config user.name  "github-actions"
         git config user.email "github-actions@github.com"
         git add models/
-        git diff --staged --quiet && echo "no change" || git commit -m "🤖 update model.pkl"
+        git diff --staged --quiet && echo "no change" || git commit -m "update model.pkl"
         git push origin HEAD:main
 
     
