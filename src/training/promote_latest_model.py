@@ -1,7 +1,8 @@
 from mlflow.tracking import MlflowClient
 import mlflow
 
-mlflow.set_tracking_uri("file:///app/mlruns")
+mlflow.set_tracking_uri("file:./mlruns")
+
 client = MlflowClient()
 
 model_name = "IrisClassifier"
