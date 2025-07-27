@@ -12,7 +12,7 @@ uvicorn==0.27.1
 # Logging and utilities
 python-dotenv==1.0.1
 
-# Optional: Prometheus metrics (Bonus)
+# Prometheus metrics
 prometheus-fastapi-instrumentator==6.1.0
 
 # Linting & Testing (for GitHub Actions)

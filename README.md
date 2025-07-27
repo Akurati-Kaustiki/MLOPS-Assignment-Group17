@@ -155,7 +155,46 @@ Workflow file: `.github/workflows/main.yml`
 ## Logging & Monitoring
 
 - All API predictions are logged to `logs/api.log`
+- Storing the predictions to `logs/predictions.db`
 - Easily extendable with `/metrics` endpoint and Prometheus
+
+To Open logs/predictions.db
+```bash
+sqlite3 logs/predictions.db
+.tables
+select * from logs;
+```
+
+- Pometheus setup at `prometheus.yml`
+1. Start Prometheus in Docker
+```bash
+docker run -d \
+  -p 9090:9090 \
+  -v $(pwd)/prometheus.yml:/etc/prometheus/prometheus.yml \
+  prom/prometheus
+```
+2. Access prometheus UI at http://localhost:9090
+3. Run Grafana in Docker
+```bash
+docker run -d -p 3000:3000 --name grafana grafana/grafana
+```
+4. Access Grafana at http://localhost:3000 with default credentials:
+    Username: admin
+    Password: admin
+5. Add Prometheus as a Data Source
+    Go to ⚙️ Configuration > Data Sources
+    Click Add data source
+    Select Prometheus
+    Set URL to: http://host.docker.internal:9090
+    Click Save & Test
+6. Build Your Dashboard
+    Click ➕ Create > Dashboard > Add new panel
+    Use queries such as:    
+        http_requests_total – Requests by route
+        http_requests_by_method_total – GET/POST breakdown
+        http_request_duration_seconds_bucket – Latency histogram
+    Customize visualization → Click Apply
+    Save your dashboard with a name like Iris Model Monitoring
 
 ---
 
@@ -169,10 +208,7 @@ Model Name: IrisClassifier
 ---
 
 ## Future Improvements
-
-- Prometheus & Grafana monitoring
 - DVC integration for large datasets
-- SQLite logging DB
 - CI/CD deployment to AWS or Render
 
 ---
