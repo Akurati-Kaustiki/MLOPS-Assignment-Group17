@@ -66,7 +66,7 @@ This repository demonstrates a **complete MLOps workflow** for classifying the I
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/iris-mlops.git
+git clone https://github.com/Akurati-Kaustiki/MLOPS-Assignment-Group17
 cd iris-mlops
 ```
 
@@ -82,7 +82,8 @@ python src/data/preprocess.py
 
 ### 4. Train and log models with MLflow
 ```bash
-python src/training/train.py
+cd src/training
+python train.py
 ```
 
 This:
@@ -93,8 +94,9 @@ This:
 ---
 
 ## View MLflow UI
-
+Open new terminal
 ```bash
+cd iris_mlops
 mlflow ui
 ```
 Open [http://localhost:5000](http://localhost:5000) in your browser.
