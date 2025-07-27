@@ -3,18 +3,9 @@ name: MLOps CI/CD Pipeline
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - 'data/**'  # Ignore data-only changes
-
-  workflow_run:
-    workflows: ["Train and Promote Iris Model"]
-    types:
-      - completed
 
 jobs:
   build-test-deploy:
-    if: |
-      github.event_name == 'push' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
 
     steps:
@@ -50,5 +41,5 @@ jobs:
 
     - name: Simulated Deployment
       run: |
-        echo "Image pushed. To run locally:"
+        echo "Image pushed. Run on any machine with:"
         echo "docker run -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/iris-api:latest"
