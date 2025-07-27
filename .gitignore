@@ -3,8 +3,6 @@ __pycache__/
 *.pyc
 *.pkl
 *.log
-mlruns/
-logs/
 .env
 .DS_Store
 .idea/
