@@ -37,3 +37,12 @@ jobs:
         name: mlruns
         path: mlruns/
 
+    - name: Commit updated mlruns to repo
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+        git add mlruns/
+        git commit -m "Update mlruns after training"
+        git push
+
+
