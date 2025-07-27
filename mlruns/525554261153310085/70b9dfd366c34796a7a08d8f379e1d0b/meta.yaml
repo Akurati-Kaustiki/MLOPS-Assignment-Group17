@@ -1,0 +1,15 @@
+artifact_uri: file:///home/runner/work/MLOPS-Assignment-Group17/MLOPS-Assignment-Group17/mlruns/525554261153310085/70b9dfd366c34796a7a08d8f379e1d0b/artifacts
+end_time: 1753624969772
+entry_point_name: ''
+experiment_id: '525554261153310085'
+lifecycle_stage: active
+run_id: 70b9dfd366c34796a7a08d8f379e1d0b
+run_name: LogisticRegression
+run_uuid: 70b9dfd366c34796a7a08d8f379e1d0b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753624967217
+status: 3
+tags: []
+user_id: runner
