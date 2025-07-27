@@ -7,10 +7,9 @@ on:
       - 'data/**'  # Ignore data-only changes
   
   workflow_run:
-    workflows: ["Train, Promote and Deploy Iris Model"]
+    workflows: ["Train and Promote Iris Model"]
     types:
       - completed
-
 
 jobs:
   build-test-deploy:
@@ -29,6 +28,13 @@ jobs:
 
     - name: Install dependencies
       run: pip install -r requirements.txt
+
+    - name: Download mlruns artifact (if triggered by training workflow)
+      if: github.event_name == 'workflow_run'
+      uses: actions/download-artifact@v3
+      with:
+        name: mlruns
+        path: mlruns/
 
     - name: Lint with flake8
       run: |

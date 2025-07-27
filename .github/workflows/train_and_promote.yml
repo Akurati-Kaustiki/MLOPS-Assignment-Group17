@@ -30,3 +30,10 @@ jobs:
     - name: Promote latest model to Production
       run: |
         python src/training/promote_latest_model.py
+
+    - name: Upload mlruns as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: mlruns
+        path: mlruns/
+
