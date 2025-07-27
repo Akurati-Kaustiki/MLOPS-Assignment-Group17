@@ -4,8 +4,10 @@ import joblib
 import numpy as np
 import logging
 import mlflow.pyfunc
+import os
 
 # Load model
+os.environ["MLFLOW_TRACKING_URI"] = "file:/app/mlruns"
 model = mlflow.pyfunc.load_model("models:/IrisClassifier/Production")
 
 app = FastAPI()
