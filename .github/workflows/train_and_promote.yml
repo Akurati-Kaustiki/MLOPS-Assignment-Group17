@@ -37,16 +37,15 @@ jobs:
         name: mlruns
         path: mlruns/
     
-    - name: Fix MLflow paths to be relative
-      run: python scripts/fix_mlflow_paths.py
+    - name: Export latest production model as model.pkl
+      run: python scripts/export_production_to_pkl.py
 
-
-    - name: Commit updated mlruns to repo
+    - name: Commit model.pkl
       run: |
-        git config user.name "github-actions"
+        git config user.name  "github-actions"
         git config user.email "github-actions@github.com"
-        git add mlruns/
-        git commit -m "Update mlruns after training"
-        git push
+        git add models/
+        git diff --staged --quiet && echo "no change" || git commit -m "🤖 update model.pkl"
+        git push origin HEAD:main
 
-
+    

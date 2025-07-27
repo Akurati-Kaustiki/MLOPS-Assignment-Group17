@@ -7,8 +7,10 @@ import mlflow.pyfunc
 import os
 
 # Load model
-mlflow.set_tracking_uri("file:./mlruns")
-model = mlflow.pyfunc.load_model("models:/IrisClassifier/Production")
+# mlflow.set_tracking_uri("file:./mlruns")
+# model = mlflow.pyfunc.load_model("models:/IrisClassifier/Production")
+model = joblib.load("models/model.pkl")
+
 
 app = FastAPI()
 logging.basicConfig(filename='logs/api.log', level=logging.INFO)
