@@ -60,5 +60,6 @@ print(f"Saved best model locally as model.pkl")
 model_uri = f"runs:/{best_run_id}/model"
 registered_model_name = "IrisClassifier"
 
+
 mlflow.register_model(model_uri=model_uri, name=registered_model_name)
 print(f"Registered best model ({best_model_name}) with accuracy {best_acc} to MLflow Registry as '{registered_model_name}'")
