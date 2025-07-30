@@ -22,3 +22,5 @@ INFO:root:Input: {'sepal_length': 1.0, 'sepal_width': 1.0, 'petal_length': 1.0, 
 2025-07-27 22:32:36,880 INFO: Input: {'sepal_length': 8.0, 'sepal_width': 3.0, 'petal_length': 5.0, 'petal_width': 6.0} → Prediction: 2
  16:23:25,074 INFO: Input: {'sepal_length': 8.0, 'sepal_width': 8.0, 'petal_length': 8.0, 'petal_width': 8.0} → Prediction: 2
 2025-07-30 16:47:09,063 INFO: Input: {'sepal_length': 1.0, 'sepal_width': 1.0, 'petal_length': 1.0, 'petal_width': 1.0} → Prediction: 0
+2025-07-30 17:01:56,053 INFO: Input: {'sepal_length': 4.0, 'sepal_width': 6.0, 'petal_length': 4.0, 'petal_width': 6.0} → Prediction: 2
+2025-07-30 17:03:11,473 INFO: Input: {'sepal_length': 5.0, 'sepal_width': 5.0, 'petal_length': 5.0, 'petal_width': 5.0} → Prediction: 2
