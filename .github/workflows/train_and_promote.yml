@@ -31,21 +31,12 @@ jobs:
       run: |
         python src/training/promote_latest_model.py
 
-    - name: Upload mlruns as artifact
+    - name: Export latest production model as model.pkl
+      run: |
+        python scripts/export_production_to_pkl.py
+
+    - name: Upload model.pkl as artifact
       uses: actions/upload-artifact@v4
       with:
-        name: mlruns
-        path: mlruns/
-    
-    - name: Export latest production model as model.pkl
-      run: python scripts/export_production_to_pkl.py
-
-    - name: Commit model.pkl
-      run: |
-        git config user.name  "github-actions"
-        git config user.email "github-actions@github.com"
-        git add models/
-        git diff --staged --quiet && echo "no change" || git commit -m "update model.pkl"
-        git push origin HEAD:main
-
-    
+        name: production-model
+        path: models/model.pkl
