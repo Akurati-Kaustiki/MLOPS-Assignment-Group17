@@ -7,7 +7,7 @@ INFO:root:Input: {'sepal_length': 1.0, 'sepal_width': 1.0, 'petal_length': 1.0, 
 2025-07-27 22:01:08,721 INFO: Input: {'sepal_length': 2.0, 'sepal_width': 1.0, 'petal_length': 3.0, 'petal_width': 4.0} → Prediction: 2
 2025-07-27 22:01:20,646 INFO: Input: {'sepal_length': 4.0, 'sepal_width': 3.0, 'petal_length': 5.0, 'petal_width': 6.0} → Prediction: 2
 2025-07-27 22:01:29,186 INFO: Input: {'sepal_length': 10.0, 'sepal_width': 3.0, 'petal_length': 5.0, 'petal_width': 6.0} → Prediction: 2
-2025-07-27 22:03:09,135 INFO: Input: {'sepal_length': 5.1, 'sepal_width': 3.5, 'petal_length': 1.4, 'petal_width': 0.2} → Prediction: 0
+2025-07-27 22:03:09,135 INFO: Input: {'sepal_length': 5.1, 'sepal_width': 3.5, 2025-07-30'petal_length': 1.4, 'petal_width': 0.2} → Prediction: 0
 2025-07-27 22:03:20,758 INFO: Input: {'sepal_length': 5.0, 'sepal_width': 2.0, 'petal_length': 0.5, 'petal_width': 0.2} → Prediction: 0
 2025-07-27 22:04:19,215 INFO: Input: {'sepal_length': 5.1, 'sepal_width': 3.5, 'petal_length': 1.4, 'petal_width': 0.2} → Prediction: 0
 2025-07-27 22:04:24,579 INFO: Input: {'sepal_length': 5.1, 'sepal_width': 3.5, 'petal_length': 2.0, 'petal_width': 0.2} → Prediction: 0
@@ -20,3 +20,5 @@ INFO:root:Input: {'sepal_length': 1.0, 'sepal_width': 1.0, 'petal_length': 1.0, 
 2025-07-27 22:32:35,715 INFO: Input: {'sepal_length': 8.0, 'sepal_width': 3.0, 'petal_length': 5.0, 'petal_width': 6.0} → Prediction: 2
 2025-07-27 22:32:36,204 INFO: Input: {'sepal_length': 8.0, 'sepal_width': 3.0, 'petal_length': 5.0, 'petal_width': 6.0} → Prediction: 2
 2025-07-27 22:32:36,880 INFO: Input: {'sepal_length': 8.0, 'sepal_width': 3.0, 'petal_length': 5.0, 'petal_width': 6.0} → Prediction: 2
+ 16:23:25,074 INFO: Input: {'sepal_length': 8.0, 'sepal_width': 8.0, 'petal_length': 8.0, 'petal_width': 8.0} → Prediction: 2
+2025-07-30 16:47:09,063 INFO: Input: {'sepal_length': 1.0, 'sepal_width': 1.0, 'petal_length': 1.0, 'petal_width': 1.0} → Prediction: 0

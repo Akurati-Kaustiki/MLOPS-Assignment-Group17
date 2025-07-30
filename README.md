@@ -124,6 +124,12 @@ docker build -t iris-api .
 ```bash
 docker run -d -p 8000:8000 iris-api
 ```
+Or 
+### Run your container and mount the logs to your host (optional but recommended for access):
+```bash
+docker run -p 8000:8000 -v $(pwd)/logs:/app/logs iris-api
+```
+
 
 ---
 
@@ -146,6 +152,7 @@ curl -X POST http://localhost:8000/predict \
 
 ```bash
 docker run -p 8000:8000 akaustiki/iris-api:latest
+docker run -p 8000:8000 -v \$(pwd)/logs:/app/logs akaustiki/iris-api:latest
 ```
 
 Workflow file: `.github/workflows/main.yml`

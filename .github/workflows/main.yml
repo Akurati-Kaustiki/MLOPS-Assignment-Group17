@@ -50,5 +50,6 @@ jobs:
 
     - name: Simulated Deployment
       run: |
-        echo "Image pushed. Run on any machine with:"
-        echo "docker run -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/iris-api:latest"
+        echo "Image pushed to Docker Hub!"
+        echo "To run the container with logs and DB persisted on your host:"
+        echo "docker run -p 8000:8000 -v \$(pwd)/logs:/app/logs ${{ secrets.DOCKER_USERNAME }}/iris-api:latest"
