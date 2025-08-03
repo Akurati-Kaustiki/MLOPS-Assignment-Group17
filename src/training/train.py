@@ -1,5 +1,5 @@
 # src/models/train.py
-
+import time
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -10,6 +10,7 @@ import joblib
 import mlflow
 import mlflow.sklearn
 import os
+import psutil
 
 # Load data
 df = pd.read_csv("data/iris.csv")
@@ -35,12 +36,30 @@ best_run_id = ""
 
 for name, model in models.items():
     with mlflow.start_run(run_name=name) as run:
+        # Monitor system usage before
+        process = psutil.Process(os.getpid())
+        start_time = time.time()
+        start_cpu = psutil.cpu_percent(interval=None)
+        start_memory = process.memory_info().rss
+
+
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
         acc = accuracy_score(y_test, y_pred)
 
+        # Monitor system usage after
+        duration = time.time() - start_time
+        end_cpu = psutil.cpu_percent(interval=None)
+        end_memory = process.memory_info().rss
+
+        
+       # Log to MLflow
         mlflow.log_param("model_name", name)
         mlflow.log_metric("accuracy", acc)
+        mlflow.log_metric("train_duration_sec", duration)
+        mlflow.log_metric("cpu_percent_usage", end_cpu)
+        mlflow.log_metric("peak_memory_MB", (end_memory - start_memory) / (1024 * 1024))
+
         mlflow.sklearn.log_model(model, artifact_path="model")
 
         # Track the best model

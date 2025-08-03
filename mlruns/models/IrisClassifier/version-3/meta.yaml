@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1754206202726
+current_stage: Production
+description: null
+last_updated_timestamp: 1754206300081
+name: IrisClassifier
+run_id: 1f7f7031664c485e9f36b96ad830bf84
+run_link: null
+source: file:///Users/akuratikaustiki/Desktop/MLOPS/assignment_2/iris_mlops/mlruns/204827278901060609/1f7f7031664c485e9f36b96ad830bf84/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///Users/akuratikaustiki/Desktop/MLOPS/assignment_2/iris_mlops/mlruns/204827278901060609/1f7f7031664c485e9f36b96ad830bf84/artifacts/model
+user_id: null
+version: 3

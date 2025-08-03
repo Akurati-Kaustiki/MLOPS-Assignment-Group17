@@ -1,8 +1,8 @@
 aliases: []
 creation_timestamp: 1754202905590
-current_stage: Production
+current_stage: Archived
 description: null
-last_updated_timestamp: 1754203080548
+last_updated_timestamp: 1754206300081
 name: IrisClassifier
 run_id: 3b536fb2b40241c596132637beab00cd
 run_link: null
