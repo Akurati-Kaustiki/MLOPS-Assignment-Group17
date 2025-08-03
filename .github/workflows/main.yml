@@ -31,7 +31,7 @@ jobs:
 
     - name: Run test predictions with model.pkl
       run: |
-        python test/test.py
+        python tests/test.py
 
     - name: Lint with flake8
       run: |
