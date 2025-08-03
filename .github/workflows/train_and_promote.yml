@@ -27,9 +27,9 @@ jobs:
       run: |
         python src/training/train.py
 
-    - name: Promote latest model to Production
-      run: |
-        python src/training/promote_latest_model.py
+    # - name: Promote latest model to Production
+    #   run: |
+    #     python src/training/promote_latest_model.py
 
     - name: Export latest production model as model.pkl
       run: |
