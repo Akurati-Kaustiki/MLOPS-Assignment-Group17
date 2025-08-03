@@ -21,19 +21,11 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-        pip install mlflow pyyaml joblib scikit-learn pandas
+        pip install mlflow pyyaml joblib scikit-learn pandas psutil
 
-    - name: Train and register model
+    - name: Train and save best model
       run: |
         python src/training/train.py
-
-    # - name: Promote latest model to Production
-    #   run: |
-    #     python src/training/promote_latest_model.py
-
-    - name: Export latest production model as model.pkl
-      run: |
-        python scripts/export_production_to_pkl.py
 
     - name: Upload model.pkl as artifact
       uses: actions/upload-artifact@v4
