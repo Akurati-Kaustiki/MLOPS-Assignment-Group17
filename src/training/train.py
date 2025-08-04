@@ -26,7 +26,7 @@ models = {
 }
 
 # Set tracking and experiment
-# mlflow.set_tracking_uri("file:../../mlruns")
+mlflow.set_tracking_uri("file:../../mlruns")
 mlflow.set_experiment("Iris_Classification")
 
 best_acc = 0
