@@ -151,6 +151,7 @@ sepal length (cm),sepal width (cm),petal length (cm),petal width (cm),target,tar
 6.8,3.2,5.9,2.3,2,virginica
 6.7,3.3,5.7,2.5,2,virginica
 6.7,3.0,5.2,2.3,2,virginica
+6.7,3.0,5.2,2.3,2,virginica
 6.3,2.5,5.0,1.9,2,virginica
 6.5,3.0,5.2,2.0,2,virginica
 6.2,3.4,5.4,2.3,2,virginica
